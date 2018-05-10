@@ -137,10 +137,14 @@ ul{
 }
 
 .footer-links {
-	width: 50vh;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.footer-links a {
+	margin: 0 1em;
 }
 
 .logo {

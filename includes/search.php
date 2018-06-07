@@ -45,6 +45,26 @@
 			}
 
 
+			$steps = "SELECT * FROM directions WHERE direction COLLATE UTF8_GENERAL_CI LIKE '%".$searchInput."%'";
+
+			foreach ($idArray as $key=>$value) {
+				
+				$steps.= " OR recipe_id= '".$idArray[$key]."'";
+			}
+
+			$idArray = array();
+
+			$stepsResults = mysqli_query($connection, $steps);
+
+			if (!$stepsResults) {
+        		die("Database query failed.");
+    		}
+
+    		while ($row = mysqli_fetch_array($stepsResults)) {  
+				array_push($idArray, $row['recipe_id']);
+
+			}
+
 			$sql = "SELECT * FROM main WHERE description COLLATE UTF8_GENERAL_CI LIKE '%".$searchInput."%' OR title COLLATE UTF8_GENERAL_CI LIKE '%".$searchInput."%' OR subtitle LIKE '%".$searchInput."%'"; 
 
 
@@ -67,7 +87,7 @@
 						<h3><?php 
 						$resultCount = mysqli_num_rows($searchResults);
 
-						echo $resultCount ?> Search Results</h3>
+						echo $resultCount ?> Search Results found for "<?php echo $searchInput ?>".</h3>
 
 						
 				</div>

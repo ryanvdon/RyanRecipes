@@ -1,8 +1,21 @@
 <?php
-	$dbhost = "localhost";
-	$dbuser = "root";
-	$dbpass = "root";
-	$dbname = "ryanrecipes";
+	
+
+	if ($host == 'localhost') {
+	  // Local database credentials
+	  $dbhost = "localhost";
+	  $dbuser = "root";
+	  $dbpass = "root";
+	  $dbname = "ryanrecipes";
+	}
+	else {
+	  // Remote database credentials
+	  $dbhost = "localhost";
+	  $dbuser = "ryanvan4_recipes";
+	  $dbpass = "ryanrecipesAdmin";
+	  $dbname = "ryanvan4_ryanrecipes";
+	}
+
 	$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 	if (mysqli_connect_errno()) {

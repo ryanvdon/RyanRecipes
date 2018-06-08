@@ -71,8 +71,22 @@
 					</a>
 					<div class="blue-space">
 					</div>
-					<div class="white-bar">
+					<div class="white-bar filter">
 						<h3>Recent Recipes</h3>
+						<form action="" method="post" class="filter-form">
+							<select name="searchInput" class="select" onchange="this.form.submit()">
+								<option value="" disabled selected>Filter Recipes</option>
+								<option value="asian">Asian</option>
+								<option value="cheesy">Cheesy</option>
+								<option value="Comfort Food">Comfort Food</option>
+								<option value="pasta">Pasta</option>
+								<option value="seafood">Seafood</option>
+								<option value="southwest">Southwest</option>
+								<option value="sweet">Sweet</option>
+								<option value="southwest">Vegetarian</option>
+							</select>
+							<!--<a href="results.html" class="button">Search</a>-->
+						</form>
 					</div>
 					<div class="section flexbox">
 

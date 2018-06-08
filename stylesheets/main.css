@@ -79,6 +79,18 @@ input[type=text] {
 	padding: 0.5em;
 }
 
+option[value=""][disabled] {
+  display: none;
+}
+
+.select {
+	height: 2.5em;
+}
+
+select option {
+	height: 2em;
+}
+
 
 ul{
 	display: inline-block;
@@ -141,6 +153,8 @@ ul{
 .card:hover a {
 	color: #666666;
 }
+
+
 
 .footer-links {
 	display: flex;
@@ -450,6 +464,17 @@ ul{
 	text-align: left;
 	padding: 0.5em;
 	transition: all 0.5s ease;
+}
+
+.filter {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.filter-form {
+	text-align: right;
+	margin: 1em 0;
 }
 
 .hero {

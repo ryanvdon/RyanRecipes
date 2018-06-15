@@ -1,7 +1,9 @@
 
 <?php
 //$searchInput = mysql_real_escape_string($_REQUEST['searchInput']);  
-			$searchInput = $_REQUEST['searchInput'];  
+			$rawsearchInput = $_REQUEST['searchInput']; 
+
+			$searchInput = htmlspecialchars($rawsearchInput, ENT_QUOTES); 
 
 			$tags = "SELECT * FROM tags WHERE tag COLLATE UTF8_GENERAL_CI LIKE '%".$searchInput."%'";
 
@@ -94,9 +96,9 @@
 								<option value="asian">Asian</option>
 								<option value="cheesy">Cheesy</option>
 								<option value="Comfort Food">Comfort Food</option>
+								<option value="mexican">Mexican</option>
 								<option value="pasta">Pasta</option>
 								<option value="seafood">Seafood</option>
-								<option value="southwest">Southwest</option>
 								<option value="sweet">Sweet</option>
 								<option value="southwest">Vegetarian</option>
 							</select>

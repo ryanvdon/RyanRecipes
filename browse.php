@@ -80,9 +80,9 @@
 								<option value="asian">Asian</option>
 								<option value="cheesy">Cheesy</option>
 								<option value="Comfort Food">Comfort Food</option>
+								<option value="mexican">Mexican</option>
 								<option value="pasta">Pasta</option>
 								<option value="seafood">Seafood</option>
-								<option value="southwest">Southwest</option>
 								<option value="sweet">Sweet</option>
 								<option value="southwest">Vegetarian</option>
 							</select>

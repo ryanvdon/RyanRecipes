@@ -85,6 +85,7 @@ option[value=""][disabled] {
 
 .select {
 	height: 2.5em;
+	width: 200px;
 }
 
 select option {
@@ -125,6 +126,10 @@ ul{
 
 .card figcaption {
 	color: black;
+}
+
+.card p {
+	margin: 0.5em auto;
 }
 
 .card figure {
@@ -276,6 +281,14 @@ ul{
 
 	h2 {
 		font-size: 1.8em;
+	}
+
+	.filter-form {
+		width: 100%;
+	}
+
+	.select {
+		width: 100%;
 	}
 
 	.main {
